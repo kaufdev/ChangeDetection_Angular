@@ -1,0 +1,17 @@
+<div class="row alert" [ngClass]="getClass(proposition)" *ngFor="let proposition of propositions">
+  <div class="col-md-3">
+    Type: {{proposition.type}}
+  </div>
+
+  <div class="col-md-3">
+    Price: {{calculatePrice(proposition.price)}}
+  </div>
+
+  <div class="col-md-3" *ngIf="!proposition.status">
+    <button class="btn btn-success" (click)="accept(proposition)">Accept</button>
+  </div>
+
+  <div class="col-md-3" *ngIf="!proposition.status">
+    <button class="btn btn-danger" (click)="reject(proposition)">Reject</button>
+  </div>
+</div>

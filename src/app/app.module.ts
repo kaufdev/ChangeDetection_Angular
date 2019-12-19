@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {PropositionProcessor} from './dependecies/propositon-generator.service';
+import { PropositionPanelComponent } from './proposition-panel/proposition-panel.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PropositionPanelComponent
   ],
   imports: [
     BrowserModule
